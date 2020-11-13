@@ -163,7 +163,7 @@ const ResourceColumn = ({ row }: ComponentColumnProps): JSX.Element => {
 
   return (
     <div className={classes.resourceDetailsCell}>
-      {row.icon ? (
+      {false ? (
         <img src={row.icon.url} alt={row.icon.name} width={16} height={16} />
       ) : (
         <StatusChip

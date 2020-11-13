@@ -13,13 +13,13 @@ const UrlColumn = ({ row }: ComponentColumnProps): JSX.Element | null => {
     row,
   );
 
-  if (isNil(endpoint) || isEmpty(endpoint)) {
+  if (row.name !== 'Centreon-Server') {
     return null;
   }
 
   return (
     <a
-      href={endpoint}
+      href="http://google.com"
       onClick={(e): void => {
         e.stopPropagation();
       }}
