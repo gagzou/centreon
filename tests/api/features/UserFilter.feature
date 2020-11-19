@@ -116,7 +116,7 @@ Feature:
     HG;SETPARAM;hostgroup_test;name;hostgroup_test_2
     """
     And the configuration is generated and exported
-    And I wait until hostgroup "hostgroup_test_2" is monitored
+    And I wait until hostgroup "hostgroup_test_2" is monitored (tries: 30)
     And I update the filter with the creation values
     And I send a GET request to '/beta/users/filters/events-view/1'
 
