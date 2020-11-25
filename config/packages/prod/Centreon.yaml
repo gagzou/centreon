@@ -212,6 +212,14 @@ services:
         class: Centreon\Domain\HostConfiguration\HostConfigurationService
         public: true
 
+    # Host groups configuration
+    Centreon\Domain\HostGroupConfiguration\Interfaces\HostGroupConfigurationRepositoryInterface:
+        class: Centreon\Infrastructure\HostGroupConfiguration\HostGroupConfigurationRepositoryRDB
+
+    Centreon\Domain\HostGroupConfiguration\Interfaces\HostGroupConfigurationServiceInterface:
+        class: Centreon\Domain\HostGroupConfiguration\HostGroupConfigurationService
+        public: true
+
     # Service configuration
     Centreon\Domain\ServiceConfiguration\Interfaces\ServiceConfigurationServiceInterface:
         class: Centreon\Domain\ServiceConfiguration\ServiceConfigurationService
